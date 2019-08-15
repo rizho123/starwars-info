@@ -42,6 +42,14 @@ app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
+app.get("/:character", function(req, res) {
+    var chosen = req.params.character;
+
+    console.log(chosen);
+
+    res.end();
+})
+
 app.get("/yoda", function(req, res) {
   res.json(yoda);
 });
